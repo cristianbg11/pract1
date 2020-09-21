@@ -62,12 +62,33 @@ public class FreeMarkerController {
         return "redirect:/index";
     }
 
-    @GetMapping("/edit/{id}")
-    public String edit(Model model, @PathVariable("id") Long id) {
+    @RequestMapping("/edit/{id}")
+    public ModelAndView edit(Model model, @PathVariable("id") Long id) {
         Estudiante student = estudianteRepository.getOne(id+1);
+
+        Map < String, Object > params = new HashMap < String, Object > ();
+    
+        params.put("edicion", student);
+        params.put("id", id+1);
+
+        return new ModelAndView("editar", params);
+        /*
         model.addAttribute("edicion", student);
         model.addAttribute("id", id+1);
-        return "/edit";
+        return "edit23";
+        */
+    }
+
+    @RequestMapping("/view/{id}")
+    public ModelAndView view(Model model, @PathVariable("id") Long id) {
+        Estudiante student = estudianteRepository.getOne(id+1);
+
+        Map < String, Object > params = new HashMap < String, Object > ();
+
+        params.put("vista", student);
+        params.put("id", id+1);
+
+        return new ModelAndView("view", params);
     }
 
     /*

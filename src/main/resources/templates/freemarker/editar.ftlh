@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Create</title>
     <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
+    <link href="css/view.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <header id="header">
     <nav class="links" style="--items: 5;">
         <a href="/">Inicio</a>
-        <a href="crear.html">Crear</a>
+        <a href="/crear">Crear</a>
         <a href="#">Editar</a>
         <a href="#">Eliminar</a>
         <span class="line"></span>
@@ -18,7 +19,7 @@
 
 <div class="signupSection">
     <form action="/actualizar" method="POST" class="signupForm" name="signupform">
-        <h2>Estudiante</h2>
+        <h2>Alumno</h2>
         <ul class="noBullet">
             <li>
                 <label for="matricula"></label>
