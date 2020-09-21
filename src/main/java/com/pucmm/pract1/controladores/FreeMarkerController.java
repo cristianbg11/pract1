@@ -36,7 +36,7 @@ public class FreeMarkerController {
 
    
 
-    @GetMapping("/index")
+    @GetMapping("/")
     public ModelAndView index(Model model){
         List<Estudiante> estudiantes = estudianteRepository.findAll();
         estudiantes = estudianteRepository.findAll();
@@ -49,7 +49,7 @@ public class FreeMarkerController {
 
     @RequestMapping("/crear")
     public String crear(Model model){
-       return "/thymeleaf/crear";
+       return "/crear";
     }
 
     @PostMapping("/insertar")
@@ -59,7 +59,7 @@ public class FreeMarkerController {
         }
 
         estudianteRepository.save(estudiante);
-        return "redirect:/index";
+        return "redirect:/";
     }
 
     @RequestMapping("/edit/{id}")
@@ -112,7 +112,7 @@ public class FreeMarkerController {
         std.setMatricula(student.matricula);
         std.setTelefono(student.telefono);
         estudianteRepository.save(std);
-        return "redirect:/index";
+        return "redirect:/";
     }
 
     @GetMapping("/delete/{id}")
@@ -121,7 +121,7 @@ public class FreeMarkerController {
                 .orElseThrow(() -> new IllegalArgumentException("Estudiante invalido:" + id));
         estudianteRepository.delete(estudiante);
         //model.addAttribute("estudantes", estudianteRepository.findAll());
-        return "index";
+        return "redirect:/";
     }
 
 }

@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Create</title>
-    <link href="css/stylesheet.css" type="text/css" rel="stylesheet">
-    <link href="css/view.css" type="text/css" rel="stylesheet">
+    <link href="/css/stylesheet.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <header id="header">
@@ -19,7 +18,7 @@
 
 <div class="signupSection">
     <form action="/actualizar" method="POST" class="signupForm" name="signupform">
-        <h2>Alumno</h2>
+        <h2>Estudiante 1</h2>
         <ul class="noBullet">
             <li>
                 <label for="matricula"></label>

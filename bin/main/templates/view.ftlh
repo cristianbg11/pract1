@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Listado de estudiantes</title>
-    <link href="css/view.css" type="text/css" rel="stylesheet">
+    <link href="/css/view.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <div class='detail'>
